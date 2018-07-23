@@ -35,6 +35,9 @@ with slim.arg_scope(inception.inception_v3_arg_scope()):
         probabilities = pred_prob[0, 0:]
         sorted_inds = [i[0] for i in sorted(enumerate(-probabilities), key=lambda x:x[1])]
         names = imagenet.create_readable_names_for_imagenet_labels()
+        for i in range(0,1001):
+            print names[i]
+
         for i in range(5):
             index = sorted_inds[i]
             print('Probability %0.2f%% => [%s]' % (probabilities[index]*100, names[index]))

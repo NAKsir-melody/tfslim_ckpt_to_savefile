@@ -24,16 +24,14 @@ Probability 0.11% => [dingo, warrigal, warragal, Canis dingo]
 Probability 0.09% => [nipple]
 Probability 0.07% => [Ibizan hound, Ibizan Podenco]
 
-* save model 
+* saved-model 
 you can see these fiies
 inception_v3.data-00000-of-00001
 inception_v3.index
 inception_v3.meta
 
-after then you can use that files like below
 
-saver = tf.train.import_meta_graph("inception_v3.meta")
-saver.restore(sess, "inception")
+you can test your save files within inference_with_savefile.py 
 
 
 
